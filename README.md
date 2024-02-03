@@ -20,6 +20,10 @@ Documentación Ruby: https://guides.rubyonrails.org
 
 Documentación Angular: https://angular.io/docs
 
+## Link al video de explicación
+
+https://youtu.be/s4fdyssmdcA
+
 ## Información de contacto
 
 xavier.ramos@udla.edu.ec
