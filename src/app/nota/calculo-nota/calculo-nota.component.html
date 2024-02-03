@@ -1,4 +1,9 @@
 <div class="container">
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+  
     <div class="progreso-container">
       <div class="progreso-box" *ngFor="let progreso of progresos; let i = index">
         <h2>{{ progreso.title }}</h2>

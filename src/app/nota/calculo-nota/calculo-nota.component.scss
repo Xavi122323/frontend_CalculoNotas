@@ -21,8 +21,6 @@ $border-color: #555555;
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 20px;
-    // Remove background color as per request
-    // background: none;
 
     h2 {
       color: $text-color;
@@ -72,7 +70,6 @@ $border-color: #555555;
     }
   }
 
-  // Updated table styles for results and notas
   .results-list,
   .notas-list {
     background: #424242;
@@ -126,9 +123,17 @@ $border-color: #555555;
       }
     }
   }
+
+  .error-message {
+    color: #ff6b6b;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ff6b6b;
+    border-radius: 5px;
+    background-color: #ffdede;
+  }
 }
 
-/* Scrollbar styles */
 ::ng-deep {
   *::-webkit-scrollbar {
     width: 8px;

@@ -21,6 +21,7 @@ export class CalculoNotaComponent {
   ];
   results: any[] = [];
   notas: any[] = [];
+  error: string | null = null;
 
   constructor(private notaService: NotaService) {}
 
@@ -29,7 +30,6 @@ export class CalculoNotaComponent {
   }
 
   fetchNotas() {
-    // Assuming the notaService has a method to get all notas
     this.notaService.getNotas().subscribe(
       data => {
         this.notas = data;
@@ -51,15 +51,16 @@ export class CalculoNotaComponent {
     };
     console.log(progresoData);
 
-    this.notaService.calcularProgresos(progresoData).subscribe(
-      response => {
-        console.log('Grades calculated:', response);
-        this.results = response;
+    this.notaService.calcularProgresos(progresoData).subscribe({
+      next: (response) => {
+        this.results = response.data;
+        this.error = null;
       },
-      error => {
-        console.error('Error calculating grades:', error);
+      error: (error) => {
+        this.error = error;
+        this.results = [];
       }
-    );
+    });
   }
 
 }
