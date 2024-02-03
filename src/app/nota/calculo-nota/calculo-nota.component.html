@@ -21,7 +21,7 @@
       <div class="list-container">
         <ul>
           <li *ngFor="let result of results | slice:0:10">
-            {{ result.nombre }}: Progreso 1: {{ result.progreso1_grade }}, Progreso 2: {{ result.progreso2_grade }}, Progreso 3: {{ result.progreso3_grade }}
+            {{ result.nombre }}: Progreso 1: {{ result.progreso1_grade | number:'1.0-2' }}, Progreso 2: {{ result.progreso2_grade | number:'1.0-2' }}, Progreso 3: {{ result.progreso3_grade | number:'1.0-2' }}
           </li>
         </ul>
       </div>
