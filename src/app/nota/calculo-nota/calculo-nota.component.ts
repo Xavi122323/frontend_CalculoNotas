@@ -5,7 +5,6 @@ interface Progreso {
   title: string;
   start: string;
   end: string;
-  count: number;
 }
 
 @Component({
@@ -16,9 +15,9 @@ interface Progreso {
 export class CalculoNotaComponent {
 
   progresos: Progreso[] = [
-    { title: 'Progreso 1', start: '', end: '', count: 0 },
-    { title: 'Progreso 2', start: '', end: '', count: 0 },
-    { title: 'Progreso 3', start: '', end: '', count: 0 }
+    { title: 'Progreso 1', start: '', end: '' },
+    { title: 'Progreso 2', start: '', end: '' },
+    { title: 'Progreso 3', start: '', end: '' }
   ];
   results: any[] = [];
   notas: any[] = [];
@@ -45,13 +44,10 @@ export class CalculoNotaComponent {
     const progresoData = {
       progreso1_start: this.progresos[0].start,
       progreso1_end: this.progresos[0].end,
-      notas_count_progreso1: this.progresos[0].count,
       progreso2_start: this.progresos[1].start,
       progreso2_end: this.progresos[1].end,
-      notas_count_progreso2: this.progresos[1].count,
       progreso3_start: this.progresos[2].start,
       progreso3_end: this.progresos[2].end,
-      notas_count_progreso3: this.progresos[2].count
     };
     console.log(progresoData);
 
