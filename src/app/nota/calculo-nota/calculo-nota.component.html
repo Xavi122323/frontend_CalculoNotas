@@ -29,7 +29,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let result of results | slice:0:10">
+        <tr *ngFor="let result of results">
           <td>{{ result.nombre }}</td>
           <td>{{ result.progreso1_grade | number:'1.2-2' }}</td>
           <td>{{ result.progreso2_grade | number:'1.2-2' }}</td>
@@ -52,7 +52,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let nota of notas | slice:0:10">
+        <tr *ngFor="let nota of notas">
           <td>{{ nota.alumno_nombre }}</td>
           <td>{{ nota.nota }}</td>
           <td>{{ nota.fecha | date:'shortDate' }}</td>
