@@ -16,26 +16,50 @@
       </div>
     </div>
     
-    <div class="results-list">
-      <h2>Results</h2>
-      <div class="list-container">
-        <ul>
-          <li *ngFor="let result of results | slice:0:10">
-            {{ result.nombre }}: Progreso 1: {{ result.progreso1_grade | number:'1.0-2' }}, Progreso 2: {{ result.progreso2_grade | number:'1.0-2' }}, Progreso 3: {{ result.progreso3_grade | number:'1.0-2' }}
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div class="results-list">
+  <h2>Results</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Alumno</th>
+          <th>Progreso 1</th>
+          <th>Progreso 2</th>
+          <th>Progreso 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results | slice:0:10">
+          <td>{{ result.nombre }}</td>
+          <td>{{ result.progreso1_grade | number:'1.2-2' }}</td>
+          <td>{{ result.progreso2_grade | number:'1.2-2' }}</td>
+          <td>{{ result.progreso3_grade | number:'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   
-    <div class="notas-list">
-      <h2>Notas</h2>
-      <div class="list-container">
-        <ul>
-          <li *ngFor="let nota of notas | slice:0:10">
-              Alumno: {{ nota.alumno_nombre }}, Nota: {{ nota.nota }}, Fecha: {{ nota.fecha | date }}
-          </li>
-        </ul>
-      </div>
-    </div>
+<div class="notas-list">
+  <h2>Notas</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Alumno</th>
+          <th>Nota</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nota of notas | slice:0:10">
+          <td>{{ nota.alumno_nombre }}</td>
+          <td>{{ nota.nota }}</td>
+          <td>{{ nota.fecha | date:'shortDate' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   </div>
   
