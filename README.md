@@ -1,4 +1,4 @@
-# Minicore cálculo se progresos
+# Minicore cálculo de progresos
 
 El proyecto a realizar es un cálculo de la nota necesaria para aprobar el tercer progreso, este utiliza una base de datos en PostgreSQL, un backend desarrollado en Ruby on Rails y un frontend en Angular. El proyecto permite que el usuario ingrese la información de las fechas de primero, segundo y tercer progreso, en base a estas fechas se cálcula la cantidad de notas en estos y con los datos ingresados se calcula en base al peso de cada progreso el aporte a la calificación final de cada uno y en progreso 3 el mínimo para llegar al 6.
 
